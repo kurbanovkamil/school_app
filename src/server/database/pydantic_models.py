@@ -15,37 +15,37 @@ class LoginData(BaseModel):
     password: str
 
 
-class User(BaseModel):
+class User(ModifyBaseModel):
     position: str
     login: str
     password: str
     power_level: int 
 
 
-class Student(BaseModel):
+class Student(ModifyBaseModel):
     student_id: int
     first_name: str
     last_name: str
     grade: str
 
 
-class Teacher(BaseModel):
+class Teacher(ModifyBaseModel):
     teacher_id: int
     first_name: str
     last_name: str
     subject: str
 
 
-class Class(BaseModel):
+class Class(ModifyBaseModel):
     class_name: str
     teacher_id: int
 
 
-class Subject(BaseModel):
+class Subject(ModifyBaseModel):
     subject_name: str
 
 
-class Grade(BaseModel):
+class Grade(ModifyBaseModel):
     student_id: int
     subject_id: int
     grade_value: float
